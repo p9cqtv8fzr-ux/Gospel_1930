@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gospel 17:30</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Gospel 17:30</h1>
+  </header>
+
+  <main>
+    <section class="result">
+      <h2>Result</h2>
+      <p id="resultMessage"></p>
+    </section>
+
+    <section class="scanner" id="scannerSection">
+      <p id="cameraStatus"></p>
+      <!-- html5-qrcode will put the camera view inside this div -->
+      <div id="qr-reader" style="width: 100%; max-width: 400px; margin-top: 1rem;"></div>
+      <button id="startScannerButton">Start QR Scanner</button>
+    </section>
+
+    
+    <section class="status">
+      <p id="status">Loading tickets...</p>
+    </section>
+
+    <section class="manual-input">
+      <label for="ticketInput">Enter / scan ticket code:</label>
+      <input
+        type="text"
+        id="ticketInput"
+        autocomplete="off"
+        inputmode="text"
+        placeholder="e.g. ABC123"
+      />
+      <button id="checkButton">Check Ticket</button>
+    </section>
+
+    <section class="stats">
+  <p>
+    Tickets scanned on this device:
+    <strong id="scanCount">0</strong>
+  </p>
+</section>
+
+    <section class="admin">
+  <h2>Admin</h2>
+  <button id="resetUsedTicketsButton">Reset Used Tickets (this device only)</button>
+</section>
+
+
+
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
